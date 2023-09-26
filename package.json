@@ -1,24 +1,37 @@
 {
-  "name": "packageName",
-  "version": "0.0.0",
+  "name": "vue3-trimmer",
+  "version": "0.0.1",
   "description": "",
-  "repository": "unjs/packageName",
+  "repository": "vue3-trimmer/vue3-trimmer/",
   "license": "MIT",
   "sideEffects": false,
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "types": "./dist/index.d.ts"
     }
   },
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "*",
+        "dist/*",
+        "dist/*.d.ts",
+        "dist/*/index.d.ts"
+      ]
+    }
+  },
   "files": [
     "dist"
   ],
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
   "scripts": {
     "build": "unbuild",
     "dev": "vitest dev",
@@ -40,7 +53,12 @@
     "prettier": "^3.0.2",
     "typescript": "^5.1.6",
     "unbuild": "^2.0.0",
-    "vitest": "^0.34.2"
+    "vitest": "^0.34.2",
+    "vue": "^3.3.4"
   },
-  "packageManager": "pnpm@8.6.12"
+  "packageManager": "pnpm@8.6.12",
+  "dependencies": {
+    "@vueuse/core": "^10.4.1",
+    "vuedraggable": "^2.24.3"
+  }
 }

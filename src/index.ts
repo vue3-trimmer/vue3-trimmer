@@ -1,3 +1,1 @@
-export function test() {
-  return "works!";
-}
+export { Vue3Trimmer } from "./trimmer-plugin"
