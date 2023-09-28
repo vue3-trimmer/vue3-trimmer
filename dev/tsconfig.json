@@ -3,7 +3,7 @@
   "compilerOptions": {
     "types": ["vite/client"],
     "paths": {
-      "my-library": ["../src"]
+      "vue3-trimmer": ["../src"]
     }
   },
   "include": ["./**/*"]

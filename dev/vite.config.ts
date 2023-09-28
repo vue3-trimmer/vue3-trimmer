@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      'my-library': path.resolve(__dirname, '../src'),
+      'vue3-trimmer': path.resolve(__dirname, '../src'),
     },
   },
 })
