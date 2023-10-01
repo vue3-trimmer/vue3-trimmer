@@ -66,6 +66,6 @@
     "access": "public"
   },
   "dependencies": {
-    "vuedraggable": "^2.24.3"
+    "vue3-grid-layout-next": "^1.0.6"
   }
 }
