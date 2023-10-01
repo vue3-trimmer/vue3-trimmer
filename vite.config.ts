@@ -1,4 +1,5 @@
 import path, { resolve } from 'node:path'
+import UnoCSS from 'unocss/vite'
 
 import Vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
@@ -17,6 +18,7 @@ const externals = [
 export default defineConfig({
   plugins: [
     dtsPlugin(),
+    UnoCSS(),
     VueMacros({
       plugins: {
         vue: Vue({

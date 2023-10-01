@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { GridItem, GridLayout } from 'vue3-grid-layout-next'
+import '../style/index.css'
 
 const layout = ref([
   { x: 0, y: 0, w: 2, h: 2, i: '0' },
@@ -27,7 +28,7 @@ const layout = ref([
 </script>
 
 <template>
-  <div>
+  <div class=" bg-green-500">
     <GridLayout
       v-model:layout="layout"
       :col-num="12"
