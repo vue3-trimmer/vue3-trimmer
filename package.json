@@ -36,7 +36,7 @@
     "build:watch": "vite build --watch",
     "dev": "vite",
     "play": "pnpm --filter playground dev",
-    "unocss": "unocss dev --watch",
+    "unocss": "unocss dev -w --write-transformed",
     "prepublishOnly": "pnpm run build",
     "release": "pnpm build && bumpp --commit --push --tag && pnpm publish",
     "lint": "eslint .",

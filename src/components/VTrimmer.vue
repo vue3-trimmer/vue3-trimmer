@@ -2,37 +2,21 @@
 import { ref } from 'vue'
 import { GridItem, GridLayout } from 'vue3-grid-layout-next'
 import '../style/index.css'
+import '../style/uno.css'
 
 const layout = ref([
   { x: 0, y: 0, w: 2, h: 2, i: '0' },
   { x: 2, y: 0, w: 2, h: 4, i: '1' },
-  { x: 4, y: 0, w: 2, h: 5, i: '2' },
-  { x: 6, y: 0, w: 2, h: 3, i: '3' },
-  { x: 8, y: 0, w: 2, h: 3, i: '4' },
-  { x: 10, y: 0, w: 2, h: 3, i: '5' },
-  { x: 0, y: 5, w: 2, h: 5, i: '6' },
-  { x: 2, y: 5, w: 2, h: 5, i: '7' },
-  { x: 4, y: 5, w: 2, h: 5, i: '8' },
-  { x: 6, y: 3, w: 2, h: 4, i: '9' },
-  { x: 8, y: 4, w: 2, h: 4, i: '10' },
-  { x: 10, y: 4, w: 2, h: 4, i: '11' },
-  { x: 0, y: 10, w: 2, h: 5, i: '12' },
-  { x: 2, y: 10, w: 2, h: 5, i: '13' },
-  { x: 4, y: 8, w: 2, h: 4, i: '14' },
-  { x: 6, y: 8, w: 2, h: 4, i: '15' },
-  { x: 8, y: 10, w: 2, h: 5, i: '16' },
-  { x: 10, y: 4, w: 2, h: 2, i: '17' },
-  { x: 0, y: 9, w: 2, h: 3, i: '18' },
-  { x: 2, y: 6, w: 2, h: 2, i: '19' },
+  { x: 2, y: 0, w: 2, h: 4, i: '2' },
 ])
 </script>
 
 <template>
-  <div class=" bg-green-500">
+  <div class="fixed bottom-0 inset-x-0 bg-zinc-50/5 border-t border-black">
     <GridLayout
       v-model:layout="layout"
       :col-num="12"
-      :row-height="30"
+      :row-height="10"
       :is-draggable="true"
       :is-resizable="true"
       :is-mirrored="false"
@@ -43,11 +27,8 @@ const layout = ref([
       <GridItem
         v-for="item in layout"
         :key="item.i"
-        :x="item.x"
-        :y="item.y"
-        :w="item.w"
-        :h="item.h"
-        :i="item.i"
+        v-bind="{ ...item }"
+        class="bg-zinc-200 rounded-md"
       >
         {{ item.i }}
       </GridItem>

@@ -9,11 +9,10 @@ export default defineConfig({
     transformerVariantGroup(),
     transformerDirectives(),
   ],
-
   cli: {
     entry: {
       patterns: ['./src/components/**/*.vue'],
-      outFile: './src/style/index.css',
+      outFile: './src/style/uno.css',
     },
   },
 })
